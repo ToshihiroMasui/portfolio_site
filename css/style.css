@@ -145,6 +145,10 @@ img {
   justify-content: center;
   height: 85vh;
   text-align: center;
+  background-image: url("/Users/masuitoshihiro/Desktop/portfolio_site/img/bg2.jpeg");
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-position: center center;
 }
 
 .mv-container {
@@ -157,6 +161,8 @@ img {
   line-height: 1.2;
   margin-bottom: 5px;
   letter-spacing: .1em;
+  
+  color: #fff;
 }
 .mv-subtitle {
   font-size: 20px;
@@ -164,11 +170,13 @@ img {
   line-height: 1;
   margin-bottom: 40px;
   letter-spacing: .08em;
+  color: #fff;
 }
 
 .mv-text {
   font-size: 16px;
   line-height: 1.8;
+  color: #fff;
 }
 
 /*--------------------------------
