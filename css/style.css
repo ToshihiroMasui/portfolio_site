@@ -11,11 +11,12 @@ a {
   color: #1ca9e3;
 }
 
-img {
+img { /*  経歴画像 */
   max-width: 100%;
   height: auto;
   vertical-align: bottom;
   border-style: none;
+  float: left;
 }
 
 
@@ -161,7 +162,7 @@ img {
   line-height: 1.2;
   margin-bottom: 5px;
   letter-spacing: .1em;
-  
+  text-shadow: 5px 5px 5px black;
   color: #fff;
 }
 .mv-subtitle {
@@ -171,88 +172,14 @@ img {
   margin-bottom: 40px;
   letter-spacing: .08em;
   color: #fff;
+  text-shadow: 5px 5px 5px black;
 }
 
 .mv-text {
   font-size: 16px;
   line-height: 1.8;
   color: #fff;
-}
-
-/*--------------------------------
- Works
----------------------------------*/
-.works-list {
-  display: flex;
-  flex-wrap: wrap;
-  margin-bottom: -40px;
-}
-
-.works-item {
-  width: 31.74603%;
-  margin-right: 1.58730%;
-  margin-bottom: 40px;
-  color: #333;
-}
-
-.works-item:hover {
-  opacity: .9;
-}
-
-.works-item:nth-of-type(3n) {
-  margin-right: 0;
-}
-
-.works-img img {
-  border: 1px solid #e6e6e6;
-}
-
-.works-name {
-  font-size: 12px;
-  font-weight: bold;
-  margin-top: 8px;
-}
-
-.works-info {
-  font-size: 10px;
-  margin-top: 5px;
-}
-
-/*--------------------------------
- Skill
----------------------------------*/
-.skill-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin-bottom: -50px;
-}
-
-.skill-item {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  width: 48%;
-  margin-bottom: 50px;
-}
-
-.skill-img {
-  width: 60px;
-  height: auto;
-  margin-right: 20px;
-}
-
-.skill-body {
-  flex: 1;
-}
-
-.skill-name {
-  margin-bottom: 10px;
-}
-
-.skill-text {
-  font-size: 14px;
-  line-height: 1.8;
+  text-shadow: 5px 5px 5px black;
 }
 
 /*--------------------------------
@@ -329,62 +256,6 @@ img {
   color: #797979;
 }
 
-/*--------------------------------
- 下層：Worksページ
----------------------------------*/
-.article {
-  padding: 80px 0;
-}
-
-.article-container {
-  max-width: 1040px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-.article-title {
-  margin-bottom: 30px;
-  text-align: center;
-}
-
-.article-body {
-  max-width: 720px;
-  margin: 0 auto;
-  margin-bottom: 80px;
-}
-
-.article-body h3 {
-  position: relative;
-  font-size: 18px;
-  margin-bottom: 5px;
-  padding-left: 1em;
-}
-
-.article-body h3:not(:first-child) {
-  margin-top: 50px;
-}
-
-.article-body h3::before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 4px;
-  height: 100%;
-  content: "";
-  border-radius: 3px;
-  background-color: #333;
-}
-
-.article-body p {
-  font-size: 15px;
-  line-height: 1.8;
-  margin-bottom: 30px;
-}
-
-.home-link {
-  text-align: center;
-}
-
 /*media Queries 767
 ----------------------------------------------------*/
 @media screen and (max-width: 767px) {
@@ -458,6 +329,7 @@ img {
 
   .mv-title {
     font-size: 30px;
+    text-shadow: 5px 5px 5px black;
   }
   .mv-subtitle {
     font-size: 16px;
@@ -467,50 +339,10 @@ img {
   .mv-text {
     font-size: 14px;
     line-height: 1.7;
+    text-shadow: 5px 5px 5px black;
   }
 
-  /* Works */
-  .works-name {
-    font-size: 12px;
-  }
 
-  .works-info {
-    margin-top: 3px;
-  }
-
-  .works-list {
-    justify-content: space-between;
-  }
-
-  .works-item {
-    flex: 0 0 48%;
-    margin-right: 0;
-    margin-bottom: 30px;
-  }
-
-  /* Skill */
-  .skill-list {
-    display: block;
-    margin-bottom: 0;
-  }
-
-  .skill-item {
-    width: 100%;
-    margin-bottom: 35px;
-  }
-
-  .skill-item:last-child {
-    margin-bottom: 0;
-  }
-
-  .skill-name {
-    margin-bottom: 5px;
-  }
-
-  .skill-text {
-    font-size: 13px;
-    line-height: 1.7;
-  }
 
   /* About */
   .profile {
@@ -555,4 +387,42 @@ img {
     line-height: 1.7;
     margin-bottom: 20px;
   }
+}
+
+
+
+
+
+/*----------------------------------------------------
+制作物
+----------------------------------------------------*/
+
+.thumbWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+}
+
+.thumbWrapper .thumbs {
+    width: 25%;
+    height: 25vw;
+    overflow: hidden
+}
+
+.thumbWrapper .thumbs img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s
+    
+}
+
+.thumbWrapper .thumbs img:hover {
+    transform: scale(1.1);
+    transition: 0.5s
+}
+.thumbWrapper img{
+  padding: 10%;
+  
 }

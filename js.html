@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>サイト名を入れてください</title>
+    <meta name="viewport" content="width=device-width",initial-scale=1.0>
+    <link rel="stylesheet" href="css/reset.css" type="text/css">
+    <link rel="stylesheet" href="css/gallery.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:300,700&display=swap" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.9.0/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/roulette.css">
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+
+    <script>
+      $(function(){
+          
+          var intervalid;
+          var num;
+          
+          for(var i = 0; i < 4; i++ ){
+              $('table').append('<tr></tr>');
+             
+              for(var j = 0; j <4; j++){
+                 
+                  $('table').append('<td>'+ (i*4+j+1) +'</td>');
+             
+                  
+                  } 
+                 
+          }
+          
+           function roulette(){
+               
+               $('.stop_color').addClass('one_stop_color');
+               $('.stop_color').removeClass('stop_color');
+               $('.start_color').removeClass('start_color');
+              
+          
+              num = $('td').not('.one_stop_color').length;
+              var rand = Math.floor(Math.random() * num); 
+              $('.start_color').removeClass('start_color')
+              $('td').not('.one_stop_color').eq(rand).addClass('start_color');
+          }
+          
+          $('#start').on('click',function(){
+              intervalid = setInterval(roulette,100);
+              $('#start').prop('disabled',true);
+          });
+          
+          $('#stop').on('click',function(){
+              clearInterval(intervalid);
+              $('.start_color').addClass('stop_color');
+              $('#start').prop('disabled',false);
+              $('#reset').prop('disabled',false);
+              
+              if(num < 1){
+                  $('#start').prop('disabled',true);
+                  $('#stop').prop('disabled')
+              }
+          });
+          
+          $('#reset').on('click',function(){
+              clearInterval(intervalid);
+              $('td').removeClass(); 
+              $('#start').prop('disabled',false);
+          });
+       });
+ </script>
+
+
+  </head>
+  <body>
+
+    <!-- ヘッダー -->
+    <header>
+      <div class="bar stripe">
+      </div>
+      <div class="inner innerwidth wrapper">
+        <div class="logo">
+          <h1><a href="index.html">スプレッドシート　制作物</a></h1>
+       
+      
+    </header><!-- ヘッダーここまで -->
+
+    <main>
+        <div class="galleryImg innerwidth">
+          <div class="" style="display:flex">
+            <div style="width: 50%;">
+                <table id='table' boder="0"></table>
+              
+                  <button id="start">スタート</button>
+                  <button id="stop">ストップ</button>
+                  <button id="reset">リセット</button>
+            </div>
+            <div class="" style="width: 50%;">
+              <h4>ルーレット</h4>
+              <p>コメントなどをご記入ください。コメントなどをご記入ください。コメントなどをご記入ください。コメントなど。コメントなどをご記入ください。</p>
+            </div>
+          </div>
+          <nav class="wrapper">
+            <div class="prev"><a href="#" class="button"><i class="fas fa-chevron-left"></i>PREV</a></div>
+            <div class="next"><a href="#" class="button">NEXT<i class="fas fa-chevron-right"></i></a></div>
+          </nav>
+        </div>
+
+    </main>
+
+
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+
+    <!-- スマホメニュー用 -->
+    <script type="text/javascript">
+      $(function() {
+      　$('.navButton').click(function() {
+      　　$(this).toggleClass('active');
+
+      　if ($(this).hasClass('active')) {
+        $('.globalNav').addClass('active');　 //クラスを付与
+            $('.sns').addClass('active');　 //クラスを付与
+        　} else {
+        　　$('.globalNav').removeClass('active'); //クラスを外す
+            $('.sns').removeClass('active'); //クラスを外す
+      　}
+      　});
+      });
+    </script><!-- スマホメニュー用ここまで -->
+
+    <!-- スムーススクロール -->
+    <script type="text/javascript">
+      $(function(){
+      var width =  $(window).width();
+      $('a[href*="#"]').click(function() {
+      var speed = 400;
+      var href= $(this).attr("href");
+      var target = $(href == "#" || href == "" ? 'html' : href);
+      var position = target.offset().top;
+      $('body,html').animate({scrollTop:position}, speed, 'swing');
+      return false;
+      });
+      });
+    </script><!-- スムーススクロールここまで -->
+</body>
+</html>

@@ -1,0 +1,693 @@
+@charset "UTF-8";
+
+/*----------------------------------------------------
+全ページ共通
+-----------------------------------------------------*/
+html {
+    font-size: 62.5%;
+    background-color: #fffef3
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box
+}
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 1.6rem;
+    color: #002337;
+    font-weight: 300;
+    letter-spacing: 1px
+}
+
+p {
+    margin: 24px 0;
+    line-height: 1.6
+}
+
+@media screen and (max-width: 1099px) {
+    p {
+        margin: 24px 0;
+        padding: 0 8px
+    }
+}
+
+a {
+    color: #002337;
+    text-decoration: none;
+    transition: 0.3s
+}
+
+a:hover {
+    opacity: 0.8;
+    transition: 0.3s
+}
+
+h2 {
+    position: relative;
+    font-size: 3.6rem;
+    color: #005d92;
+    text-align: center;
+    margin: 80px
+}
+
+@media screen and (max-width: 1099px) {
+    h2 {
+        font-size: 3rem
+    }
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    top: 5rem;
+    left: 46%;
+    width: 8%;
+    height: 4px;
+    background: repeating-linear-gradient(-45deg, #005d92 0, #005d92 4px, #fff 4px, #fff 8px)
+}
+
+@media screen and (max-width: 1099px) {
+    h2::after {
+        left: 42%;
+        width: 16%
+    }
+}
+
+h3 {
+    position: relative;
+    font-size: 3rem;
+    color: #005d92;
+    margin: 32px 0
+}
+
+@media screen and (max-width: 1099px) {
+    h3 {
+        font-size: 2.4rem
+    }
+}
+
+h3::after {
+    content: '';
+    position: absolute;
+    top: 2.7rem;
+    left: 0;
+    border-bottom: 4px solid #005d92;
+    width: 100%
+}
+
+@media screen and (max-width: 1099px) {
+    h3::after {
+        top: 2.1rem
+    }
+}
+
+h4 {
+    font-size: 2.4rem;
+    color: #005d92
+}
+
+@media screen and (max-width: 1099px) {
+    h4 {
+        font-size: 1.8rem
+    }
+}
+
+@media screen and (max-width: 1099px) {
+    img {
+        max-width: 100%
+    }
+}
+
+ul {
+    list-style: none
+}
+
+ol {
+    list-style-position: inside
+}
+
+.wrapper {
+    display: flex
+}
+
+.clearfix {
+    content: '';
+    display: block;
+    clear: both
+}
+
+/*laber*/
+.label {
+    display: inline-block;
+    margin: 12px;
+    padding: 4px 8px;
+    background-color: #005d92;
+    color: #fff;
+    border-radius: 4px
+}
+
+@media screen and (max-width: 1099px) {
+    .label {
+        display: block
+    }
+}
+
+/*button*/
+.button {
+    display: inline-block;
+    margin: 12px;
+    padding: 8px;
+    background-color: #005d92;
+    color: #fff;
+    border-radius: 4px
+}
+
+/*box1-----------------------------------------------*/
+.box1 {
+    position: relative;
+    width: 818px;
+    margin: 0 auto;
+    padding: 24px;
+    background-color: #fff;
+    border: 4px solid #005d92;
+    border-radius: 8px
+}
+
+@media screen and (max-width: 1099px) {
+    .box1 {
+        width: 100%;
+        padding: 8px
+    }
+}
+
+.box1 h3 {
+    position: absolute;
+    top: -3rem;
+    margin: 0
+}
+
+@media screen and (max-width: 1099px) {
+    .box1 h3 {
+        top: -2.4rem
+    }
+}
+
+.box1 h3::after {
+    border: 0
+}
+
+.box1 li {
+    border-bottom: 2px dotted #95bed7
+}
+
+.box1 li:last-child {
+    border: none
+}
+
+@media screen and (max-width: 1099px) {
+    .box1 li span {
+        display: block;
+        margin: 12px
+    }
+}
+/*---------------------------------------------------*/
+
+/*box2-----------------------------------------------*/
+.box2 {
+    border: 4px solid #95bed7;
+    border-radius: 8px;
+    background-color: #fff
+}
+
+.box2 .title {
+    padding: 32px;
+    background-color: #95bed7
+}
+
+.box2 .title h4 {
+    color: #fff
+}
+
+@media screen and (max-width: 1099px) {
+    .box2 .title {
+        padding: 16px
+    }
+}
+
+.box2 p {
+    padding: 0 32px
+}
+
+@media screen and (max-width: 1099px) {
+    .box2 p {
+        padding: 16px;
+        margin: 0
+    }
+}
+/*---------------------------------------------------*/
+
+.stripe {
+    background: repeating-linear-gradient(-45deg, #005d92 0, #005d92 4px, #fff 4px, #fff 8px)
+}
+
+.empty {
+    display: block;
+    height: 80px
+}
+
+.bgWhite {
+    background-color: #fff
+}
+
+.innerwidth {
+    width: 1100px;
+    margin: 0 auto
+}
+
+@media screen and (max-width: 1099px) {
+    .innerwidth {
+        width: 100%
+    }
+}
+
+/*----------------------------------------------------
+ヘッダー
+----------------------------------------------------*/
+
+header {
+    position: relative;
+    top: 0;
+    left: 0
+}
+
+header .bar {
+    height: 8px
+}
+
+header .inner {
+    position: relative;
+    font-weight: 700;
+    letter-spacing: 3px;
+    justify-content: space-between
+}
+
+header .inner a {
+    display: block;
+    transition: 0.3s
+}
+
+header .inner a:hover {
+    opacity: 1;
+    transform: translateY(-4px);
+    transition: 0.3s
+}
+
+/*logo-----------------------------------------------*/
+header .inner .logo h1 {
+    margin-top: 28px;
+    font-size: 3.6rem
+}
+
+@media screen and (max-width: 1099px) {
+    header .inner .logo h1 {
+        margin: 4px 0
+    }
+}
+
+header .inner .logo h1 a {
+    color: #005d92
+}
+/*---------------------------------------------------*/
+
+/*sns------------------------------------------------*/
+
+@media screen and (max-width: 1099px) {
+    header .inner .sns {
+        position: fixed;
+        width: 100%;
+        bottom: 30%;
+        justify-content: center;
+        z-index: 2;
+        transform: translateX(-100%);
+        transition: 0.5s
+    }
+
+    header .inner .sns.active {
+        transform: translateX(0%);
+        transition: 0.5s
+    }
+}
+
+header .inner .sns li {
+    margin: 0 8px
+}
+
+header .inner .sns li i {
+    margin-top: 32px;
+    font-size: 3rem
+}
+
+header .inner .sns li img {
+    margin-top: 32px
+}
+
+header .inner .sns li.twitter i {
+    color: #55acee;
+    background-color: #fff;
+    width: 26px;
+    height: 27px;
+    border-radius: 3px;
+    overflow: hidden
+}
+
+header .inner .sns li.facebook i {
+    color: #315096;
+    background-color: #fff;
+    width: 26px;
+    height: 27px;
+    overflow: hidden;
+    border-radius: 3px
+}
+
+header .inner .sns li.instagram i {
+    color: #e1306c;
+    background-color: #fff;
+    width: 26px;
+    height: 27px;
+    overflow: hidden;
+    border-radius: 8px
+}
+/*---------------------------------------------------*/
+
+/*グローバルメニュー----------------------------------*/
+
+header nav .navButton {
+    display: none
+}
+
+@media screen and (max-width: 1099px) {
+    header nav .navButton {
+        display: block;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 40px;
+        height: 40px;
+        z-index: 9999;
+        background-color: #005d92
+    }
+
+    header nav .navButton::after {
+        content: '\f0c9';
+        position: absolute;
+        font-family: 'Font Awesome 5 free';
+        font-weight: 900;
+        color: #fff;
+        font-size: 3rem;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        width: 26.25px;
+        height: 29.6px;
+        transition: 0.5s
+    }
+
+    header nav .navButton.active::after {
+        content: '\f00d';
+        font-size: 3rem;
+        width: 20.6px;
+        height: 28.6px;
+        transition: 0.5s
+    }
+}
+
+header nav .globalNav {
+    justify-content: center;
+    width: 100%;
+    font-weight: 700
+}
+
+@media screen and (max-width: 1099px) {
+    header nav .globalNav {
+        display: block;
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100%;
+        background-color: rgba(0, 93, 146, 0.9);
+        z-index: 1;
+        transform: translateX(-100%);
+        transition: 0.5s
+    }
+
+    header nav .globalNav.active {
+        transform: translateX(0%);
+        transition: 0.5s
+    }
+}
+
+header nav .globalNav a {
+    display: block;
+    height: 24px;
+    margin: 36px 4px;
+    padding: 0 12px;
+    text-align: center;
+    line-height: 24px;
+    transition: 0.3s
+}
+
+@media screen and (max-width: 1099px) {
+    header nav .globalNav a {
+        color: #fff
+    }
+}
+
+header nav .globalNav a:hover {
+    background-color: #005d92;
+    color: #fff;
+    border-radius: 4px;
+    opacity: 1;
+    transform: translateY(-4px);
+    transition: 0.3s
+}
+/*---------------------------------------------------*/
+
+/*----------------------------------------------------
+トップ画像
+----------------------------------------------------*/
+.topImg {
+    width: 100%;
+    height: 100vh;
+    background: url("../img/top.jpg") no-repeat center center;
+    background-size: cover
+}
+
+/*----------------------------------------------------
+コンテンツ
+----------------------------------------------------*/
+main{
+
+}
+
+/*----------------------------------------------------
+トップページ　ギャラリー
+----------------------------------------------------*/
+
+.thumbWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%
+}
+
+.thumbWrapper .thumbs {
+    width: 25%;
+    height: 25vw;
+    overflow: hidden
+}
+
+.thumbWrapper .thumbs img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s
+}
+
+.thumbWrapper .thumbs img:hover {
+    transform: scale(1.1);
+    transition: 0.5s
+}
+
+#gallery .more {
+    display: block;
+    margin: 8px auto;
+    color: #005d92;
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: right
+}
+
+#gallery .more i {
+    color: #005d92;
+    margin-left: 8px
+}
+
+/*----------------------------------------------------
+ギャラリー
+----------------------------------------------------*/
+
+.innerwidth .thumbs {
+    height: 18vw
+}
+
+@media screen and (max-width: 1099px) {
+    .innerwidth .thumbs {
+        height: 25vw
+    }
+}
+
+.galleryImg img {
+    display: block;
+    max-width: 100%;
+    margin: 32px auto
+}
+
+.galleryImg caption time {
+    text-align: right
+}
+
+.galleryImg nav {
+    justify-content: space-between
+}
+
+.galleryImg nav .prev,
+.galleryImg nav .next {
+    margin: 12px 0;
+    padding: 0
+}
+
+.galleryImg nav .prev i,
+.galleryImg nav .next i {
+    margin: 0 8px
+}
+
+.galleryImg nav .prev a {
+    margin: 0;
+    padding-right: 16px
+}
+
+.galleryImg nav .next a {
+    margin: 0;
+    padding-left: 16px
+}
+
+/*----------------------------------------------------
+リンク
+----------------------------------------------------*/
+
+#link {
+    margin-bottom: 80px
+}
+
+@media screen and (max-width: 1099px) {
+    #link img {
+        margin: 0 8px
+    }
+}
+
+#link ul {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap
+}
+
+#link ul li {
+    margin-bottom: 24px
+}
+
+/*----------------------------------------------------
+フッター
+----------------------------------------------------*/
+
+footer {
+    background-color: #005d92;
+    color: #fff;
+    text-align: center;
+    margin-top: 160px
+}
+
+footer .innerwidth {
+    position: relative
+}
+
+footer .innerwidth .toTop {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    width: 80px;
+    height: 80px;
+    background-color: #005d92;
+    border-radius: 8px 8px 0 0;
+    padding: 12px 0;
+    transition: 0.3s
+}
+
+@media screen and (max-width: 1099px) {
+    footer .innerwidth .toTop {
+        top: -20px;
+        right: 0;
+        width: 40px;
+        height: 40px
+    }
+}
+
+footer .innerwidth .toTop:hover {
+    transform: translateY(-20px);
+    transition: 0.3s
+}
+
+footer .innerwidth .toTop a {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0
+}
+
+footer .innerwidth .toTop i {
+    font-size: 3rem
+}
+
+@media screen and (max-width: 1099px) {
+    footer .innerwidth .toTop i {
+        font-size: 2rem
+    }
+}
+
+footer .innerwidth .toTop p {
+    margin: 0
+}
+
+@media screen and (max-width: 1099px) {
+    footer .innerwidth .toTop p {
+        display: none
+    }
+}
+
+footer .innerwidth small {
+    display: block;
+    padding: 32px
+}
+
+footer .innerwidth small a {
+    color: #fff
+}
+
+footer .innerwidth small a:hover {
+    border-bottom: 1px solid #fff
+}

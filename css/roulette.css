@@ -1,0 +1,27 @@
+button{
+    font-size:25px;
+    margin:10px;
+    
+}
+
+td{
+    font-size:30px;
+    text-align:center;
+    border:solid 2px black;
+   
+    padding:30px;
+}
+#table{
+    border:solid 5px black;
+    border-collapse:collapse; 
+}
+.start_color{
+    background-color:#FFCC00;
+}
+
+.stop_color{
+    background-color:red;
+}
+.one_stop_color{
+    background-color:#FFAD90;
+}
