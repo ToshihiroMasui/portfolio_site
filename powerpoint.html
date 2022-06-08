@@ -2,47 +2,41 @@
 <html lang="ja" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>サイト名を入れてください</title>
+    <title>PowerPoint</title>
     <meta name="viewport" content="width=device-width",initial-scale=1.0>
     <link rel="stylesheet" href="css/reset.css" type="text/css">
     <link rel="stylesheet" href="css/gallery.css">
-    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:300,700&display=swap" rel="stylesheet">
-    <link href="https://use.fontawesome.com/releases/v5.9.0/css/all.css" rel="stylesheet">
   </head>
   <body>
-
-    <!-- ヘッダー -->
     <header>
-      <div class="bar stripe">
-      </div>
+      <div class="bar stripe"></div>
       <div class="inner innerwidth wrapper">
         <div class="logo">
-          <h1><a href="index.html">PowerPoint 制作物</a></h1>
+          
         </div>
-        
       </div>
-      
-    </header><!-- ヘッダーここまで -->
-
+    </header>
     <main>
-        <div class="galleryImg innerwidth">
-          <div style="display:flex;">
-            <img src="img/powerpoint1.jpg" alt="画像" style="height: 50%; width: 50%;">
-            <img src="img/powerpoint2.jpg" alt="画像" style="height: 50%; width: 50%;">
-          </div>
-          <caption>
-            <h4>タイトル</h4>
-            <p>コメントなどをご記入ください。</p>
-          </caption>
-          <nav class="wrapper">
-            <div class="prev"><a href="#" class="button"><i class="fas fa-chevron-left"></i>PREV</a></div>
-            <div class="next"><a href="#" class="button">NEXT<i class="fas fa-chevron-right"></i></a></div>
-          </nav>
+      <div class="galleryImg innerwidth">
+        <div style="display:flex;">
+          <img src="img/powerpoint1.jpg" alt="画像" style="height: 50%; width: 50%;">
+          <img src="img/powerpoint2.jpg" alt="画像" style="height: 50%; width: 50%;">
         </div>
+        <caption>
+          <h4>PowerPoint 作品</h4>
+          <p>都島区役所からの依頼で障害者・児童　支援通所施設通所紹介冊子を作成しました。
 
+            チームで行いリーダーを務めクライアントと表紙やレイアウトの相談・報告を行いました。
+            また自らもPowerPointでページのレイアウトを作成し事業所の責任者に電話をかけ冊子への掲載のお願いをしました。
+            
+            都島区だからこその桜のイメージやQRコード簡単に事業所のホームページへのアクセスなどを提案し作成しました。</p>
+        </caption>
+        <nav class="wrapper">
+          <div class="prev"><a href="#" class="button"><i class="fas fa-chevron-left"></i>PREV</a></div>
+          <div class="next"><a href="#" class="button">NEXT<i class="fas fa-chevron-right"></i></a></div>
+        </nav>
+      </div>
     </main>
-
-    <!-- フッター -->
     <footer>
       <div class="innerwidth">
         <div class="toTop">
@@ -52,42 +46,10 @@
         </div>
         <small>Copyright &copy; 20xx YOUR SITE NAME. Design by <a href="https://utsusemi.hiroec.com">Utsusemi</a></small>
       </div>
-    </footer><!-- フッターここまで -->
+    </footer>
 
     <!-- jquery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
-
-    <!-- スマホメニュー用 -->
-    <script type="text/javascript">
-      $(function() {
-      　$('.navButton').click(function() {
-      　　$(this).toggleClass('active');
-
-      　if ($(this).hasClass('active')) {
-        $('.globalNav').addClass('active');　 //クラスを付与
-            $('.sns').addClass('active');　 //クラスを付与
-        　} else {
-        　　$('.globalNav').removeClass('active'); //クラスを外す
-            $('.sns').removeClass('active'); //クラスを外す
-      　}
-      　});
-      });
-    </script><!-- スマホメニュー用ここまで -->
-
-    <!-- スムーススクロール -->
-    <script type="text/javascript">
-      $(function(){
-      var width =  $(window).width();
-      $('a[href*="#"]').click(function() {
-      var speed = 400;
-      var href= $(this).attr("href");
-      var target = $(href == "#" || href == "" ? 'html' : href);
-      var position = target.offset().top;
-      $('body,html').animate({scrollTop:position}, speed, 'swing');
-      return false;
-      });
-      });
-    </script><!-- スムーススクロールここまで -->
-</body>
+  </body>
 </html>

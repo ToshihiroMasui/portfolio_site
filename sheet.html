@@ -2,7 +2,7 @@
 <html lang="ja" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>サイト名を入れてください</title>
+    <title>spreadsheet</title>
     <meta name="viewport" content="width=device-width",initial-scale=1.0>
     <link rel="stylesheet" href="css/reset.css" type="text/css">
     <link rel="stylesheet" href="css/gallery.css">
@@ -17,18 +17,29 @@
       </div>
       <div class="inner innerwidth wrapper">
         <div class="logo">
-          <h1><a href="index.html">スプレッドシート　制作物</a></h1>
        
       
     </header><!-- ヘッダーここまで -->
 
     <main>
         <div class="galleryImg innerwidth">
-          <img src="img/sheet1.png" alt="画像" class="sheet">
-          <img src="img/sheet2.png" alt="画像" class="sheet">
+          <div class="sheets">
+            <img src="img/sheet1.png" alt="画像" class="sheet">
+            <img src="img/sheet2.png" alt="画像" class="sheet">
+          </div>
           <caption>
-            <h4>タイトル</h4>
-            <p>コメントなどをご記入ください。</p>
+            <h4>スプレッドシート　作品</h4>
+            <h5 style="margin-top:20px;">在庫管理表</h5>
+            <p>就労移行支援事業所の備品を利用者で管理する為、皆さんが日頃訓練で使用しているスプレッドシートを利用し作成しました。
+
+              関数を使用し在庫が発注目安を下回れば分かりやすく発注という文字が表示され、発注書をクリックすると発注が必要な物だけ抽出され紙で印刷できるようにしています。
+              またGASを使用し入出庫数を入力すると自動で在庫数が変わり日にちと数が履歴シートに出力されます。
+              
+              こだわった点は初めてスプレッドシートを使う方にも分かりやすくシートを細かくわけ表もシンプルにした事です。。</p>
+
+              <h5>蔵書管理</h5>
+              <p>こちらは備品の図書の貸し出しの管理を行う為、GASとGoogle Book APIを使用し作成しました。
+                本のバーコードの数字を入力すると本の情報が自動で取得されます。また分かりやすく本の表紙も自動で表示できる仕組みにしました。</p>
 <!--             <a href="https://docs.google.com/spreadsheets/d/1YrP3Sq7JlPRqdgmBK9TuuBUlSlVD9zqmf3c_fMsKdO4/edit?usp=sharing">図書管理シート</a>
             <a href="https://docs.google.com/spreadsheets/d/1u66Gg92BJA91sAG99CWGaCwkl33wjgeU_9gff7x9Yvc/edit?usp=sharing">在庫管理シート</a> -->
             
@@ -40,42 +51,22 @@
         </div>
 
     </main>
+    <footer>
+      <div class="innerwidth">
+        <div class="toTop">
+          <a href="#"></a>
+          <i class="fas fa-chevron-up"></i>
+          <p>TOP</p>
+        </div>
+        <small>Copyright &copy; 20xx YOUR SITE NAME. Design by <a href="https://utsusemi.hiroec.com">Utsusemi</a></small>
+      </div>
+    </footer>
 
 
     <!-- jquery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
 
-    <!-- スマホメニュー用 -->
-    <script type="text/javascript">
-      $(function() {
-      　$('.navButton').click(function() {
-      　　$(this).toggleClass('active');
-
-      　if ($(this).hasClass('active')) {
-        $('.globalNav').addClass('active');　 //クラスを付与
-            $('.sns').addClass('active');　 //クラスを付与
-        　} else {
-        　　$('.globalNav').removeClass('active'); //クラスを外す
-            $('.sns').removeClass('active'); //クラスを外す
-      　}
-      　});
-      });
-    </script><!-- スマホメニュー用ここまで -->
-
-    <!-- スムーススクロール -->
-    <script type="text/javascript">
-      $(function(){
-      var width =  $(window).width();
-      $('a[href*="#"]').click(function() {
-      var speed = 400;
-      var href= $(this).attr("href");
-      var target = $(href == "#" || href == "" ? 'html' : href);
-      var position = target.offset().top;
-      $('body,html').animate({scrollTop:position}, speed, 'swing');
-      return false;
-      });
-      });
-    </script><!-- スムーススクロールここまで -->
+   
 </body>
 </html>
