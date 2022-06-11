@@ -1,25 +1,24 @@
 body {
-  font-family: "Montserrat","Helvetica Neue",Arial,"Hiragino Kaku Gothic ProN","Hiragino Sans",Meiryo,sans-serif;
+  font-family: "Montserrat", "Helvetica Neue", Arial,
+    "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
   font-size: 15px;
-  letter-spacing: .05em;
+  letter-spacing: 0.05em;
   color: #333;
 }
 
 a {
-  transition: opacity .3s;
+  transition: opacity 0.3s;
   text-decoration: none;
   color: #1ca9e3;
 }
 
-img { /*  経歴画像 */
+img {
+  /*  経歴画像 */
   max-width: 100%;
   height: auto;
   vertical-align: bottom;
   border-style: none;
-  float: left;
 }
-
-
 
 .pc-only {
   display: block;
@@ -59,7 +58,7 @@ img { /*  経歴画像 */
   line-height: 1;
   margin-bottom: 40px;
   text-align: center;
-  letter-spacing: .05em;
+  letter-spacing: 0.05em;
   color: #333;
 }
 
@@ -78,7 +77,7 @@ img { /*  経歴画像 */
   z-index: 1;
   width: 100%;
   background-color: #fff;
-  box-shadow: 0 5px 10px -6px rgba(0,0,0,.1);
+  box-shadow: 0 5px 10px -6px rgba(0, 0, 0, 0.1);
 }
 
 .header .container {
@@ -93,7 +92,7 @@ img { /*  経歴画像 */
   font-weight: bold;
   line-height: 1.2;
   margin-right: 20px;
-  letter-spacing: .05em;
+  letter-spacing: 0.05em;
 }
 
 .header-logo a {
@@ -116,8 +115,8 @@ img { /*  経歴画像 */
   font-weight: bold;
   display: inline-block;
   padding: 5px 0;
-  transition: .3s;
-  letter-spacing: .05em;
+  transition: 0.3s;
+  letter-spacing: 0.05em;
   color: #333;
 }
 .gnav-item a:after {
@@ -127,7 +126,7 @@ img { /*  経歴画像 */
   width: 0;
   height: 3px;
   content: "";
-  transition: .3s;
+  transition: 0.3s;
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
   background-color: #333;
@@ -147,8 +146,8 @@ img { /*  経歴画像 */
   height: 85vh;
   text-align: center;
   background-image: url("https://github.com/ToshihiroMasui/portfolio_site/blob/main/img/bg2.jpeg?raw=true");
-  background-repeat:no-repeat;
-  background-size:cover;
+  background-repeat: no-repeat;
+  background-size: cover;
   background-position: center center;
 }
 
@@ -161,9 +160,9 @@ img { /*  経歴画像 */
   font-weight: bold;
   line-height: 1.2;
   margin-bottom: 5px;
-  letter-spacing: .1em;
+  letter-spacing: 0.1em;
   text-shadow: 7px 7px 7px black;
-  
+
   color: #fff;
 }
 .mv-subtitle {
@@ -171,10 +170,9 @@ img { /*  経歴画像 */
   font-weight: bold;
   line-height: 1;
   margin-bottom: 40px;
-  letter-spacing: .08em;
+  letter-spacing: 0.08em;
   color: #fff;
   text-shadow: 3px 3px 3px black;
-  
 }
 
 .mv-text {
@@ -182,9 +180,39 @@ img { /*  経歴画像 */
   line-height: 1.8;
   color: #fff;
   text-shadow: 8px 8px 8px black;
-  
 }
 
+/*----------------------------------------------------
+制作物
+----------------------------------------------------*/
+
+.thumbWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+}
+
+.thumbWrapper .thumbs {
+  width: 25%;
+  height: 25vw;
+  overflow: hidden;
+}
+
+.thumbWrapper .thumbs img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.5s;
+}
+
+.thumbWrapper .thumbs img:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+.thumbWrapper img {
+  padding: 10%;
+}
 
 /*--------------------------------
  About
@@ -216,20 +244,6 @@ img { /*  経歴画像 */
   margin-bottom: 30px;
 }
 
-/*--------------------------------
- Contact
----------------------------------*/
-.contact {
-  text-align: center;
-}
-
-.contact-item:not(:last-child) {
-  margin-right: 10px;
-}
-
-.contact-text {
-  margin-top: 10px;
-}
 /*--------------------------------
  ページトップ
 ---------------------------------*/
@@ -333,7 +347,6 @@ img { /*  経歴画像 */
 
   .mv-title {
     font-size: 30px;
-    text-shadow: 5px 5px 5px black;
   }
   .mv-subtitle {
     font-size: 16px;
@@ -343,10 +356,7 @@ img { /*  経歴画像 */
   .mv-text {
     font-size: 14px;
     line-height: 1.7;
-    text-shadow: 5px 5px 5px black;
   }
-
-
 
   /* About */
   .profile {
@@ -379,7 +389,7 @@ img { /*  経歴画像 */
 
   .article-body h3 {
     font-size: 16px;
-    padding-left: .8em;
+    padding-left: 0.8em;
   }
 
   .article-body h3:not(:first-child) {
@@ -391,42 +401,4 @@ img { /*  経歴画像 */
     line-height: 1.7;
     margin-bottom: 20px;
   }
-}
-
-
-
-
-
-/*----------------------------------------------------
-制作物
-----------------------------------------------------*/
-
-.thumbWrapper {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    justify-content: center;
-}
-
-.thumbWrapper .thumbs {
-    width: 25%;
-    height: 25vw;
-    overflow: hidden
-}
-
-.thumbWrapper .thumbs img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: 0.5s
-    
-}
-
-.thumbWrapper .thumbs img:hover {
-    transform: scale(1.1);
-    transition: 0.5s
-}
-.thumbWrapper img{
-  padding: 10%;
-  
 }

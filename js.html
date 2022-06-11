@@ -1,99 +1,91 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <meta charset="utf-8">
-    <title> Javascript</title>
-    <meta name="viewport" content="width=device-width",initial-scale=1.0>
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/gallery.css">
-    <link rel="stylesheet" href="css/roulette.css">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Javascript</title>
+    <meta name="viewport" content="width=device-width" ,initial-scale="1.0" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/gallery.css" />
+    <link rel="stylesheet" href="css/roulette.css" />
+    <link href="https://use.fontawesome.com/releases/v5.9.0/css/all.css" rel="stylesheet" />
     <script src="https://code.jquery.com/jquery-3.5.0.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
     <script>
-      $(function(){
-        var intervalid;
-        var num;
-        for(var i = 0; i < 4; i++ ){
-          $('table').append('<tr></tr>');
-          for(var j = 0; j <4; j++){
-            $('table').append('<td>'+ (i*4+j+1) +'</td>');
-          } 
-        }
-        function roulette(){
-          $('.stop_color').addClass('one_stop_color');
-          $('.stop_color').removeClass('stop_color');
-          $('.start_color').removeClass('start_color');
-          
-          num = $('td').not('.one_stop_color').length;
-          var rand = Math.floor(Math.random() * num); 
-          $('.start_color').removeClass('start_color')
-          $('td').not('.one_stop_color').eq(rand).addClass('start_color');
-        }
-          
-        $('#start').on('click',function(){
-          intervalid = setInterval(roulette,100);
-          $('#start').prop('disabled',true);
+        $(function() {
+            var intervalid;
+            var num;
+            for (var i = 0; i < 4; i++) {
+                $("table").append("<tr></tr>");
+                for (var j = 0; j < 4; j++) {
+                    $("table").append("<td>" + (i * 4 + j + 1) + "</td>");
+                }
+            }
+
+            function roulette() {
+                $(".stop_color").addClass("one_stop_color");
+                $(".stop_color").removeClass("stop_color");
+                $(".start_color").removeClass("start_color");
+
+                num = $("td").not(".one_stop_color").length;
+                var rand = Math.floor(Math.random() * num);
+                $(".start_color").removeClass("start_color");
+                $("td").not(".one_stop_color").eq(rand).addClass("start_color");
+            }
+
+            $("#start").on("click", function() {
+                intervalid = setInterval(roulette, 100);
+                $("#start").prop("disabled", true);
+            });
+
+            $("#stop").on("click", function() {
+                clearInterval(intervalid);
+                $(".start_color").addClass("stop_color");
+                $("#start").prop("disabled", false);
+                $("#reset").prop("disabled", false);
+
+                if (num < 1) {
+                    $("#start").prop("disabled", true);
+                    $("#stop").prop("disabled");
+                }
+            });
+
+            $("#reset").on("click", function() {
+                clearInterval(intervalid);
+                $("td").removeClass();
+                $("#start").prop("disabled", false);
+            });
         });
-          
-        $('#stop').on('click',function(){
-          clearInterval(intervalid);
-          $('.start_color').addClass('stop_color');
-          $('#start').prop('disabled',false);
-          $('#reset').prop('disabled',false);
-              
-          if(num < 1){
-            $('#start').prop('disabled',true);
-            $('#stop').prop('disabled')
-          }
-        });
-          
-        $('#reset').on('click',function(){
-          clearInterval(intervalid);
-          $('td').removeClass(); 
-          $('#start').prop('disabled',false);
-        });
-      });
     </script>
-  </head>
-  <body>
-  <header>
-    <div class="bar stripe"></div>
-      <div class="inner innerwidth wrapper">
-        
+</head>
+
+<body>
+
+    <main style="margin-top: 100px">
+        <div class="galleryImg innerwidth">
+            <div class="">
+                <div class="">
+                    <table id="table" boder="0"></table>
+                    <button id="start">スタート</button>
+                    <button id="stop">ストップ</button>
+                    <button id="reset">リセット</button>
+                </div>
+                <div class="">
+                    <h4>ルーレット</h4>
+                    <p>
+                        1年前、プログラミング言語を始めて間もない頃、課題としてJavascriptの仕組みを知るために作成しました。 基礎に時間をかけましたが、この課題をクリアできればプログラミングを続けていけるだろうと思い学んだ記憶がございます。
+                    </p>
+                </div>
+            </div>
+            <nav class="wrapper">
+                <div class="prev">
+                    <a href="powerpoint.html" class="button"><i class="fas fa-chevron-left"></i>PREV</a
+            >
+        </nav>
       </div>
-  </header>
-  <main style="margin-top: 100px;">
-    <div class="galleryImg innerwidth">
-      <div class="" style="display:flex">
-        <div style="width: 50%;">
-          <table id='table' boder="0"></table>
-          <button id="start">スタート</button>
-          <button id="stop">ストップ</button>
-          <button id="reset">リセット</button>
-        </div>
-        <div class="" style="width: 50%;">
-          <h4>ルーレット</h4>
-          <p>1年前、プログラミング言語を始めて間もない頃、課題としてJavascriptの仕組みを知るために作成しました。
-            基礎に時間をかけましたが、この課題をクリアできればプログラミングを続けていけるだろうと思い学んだ記憶がございます。</p>
-        </div>
-      </div>
-      <nav class="wrapper">
-        <div class="prev"><a href="#" class="button"><i class="fas fa-chevron-left"></i>PREV</a></div>
-        <div class="next"><a href="#" class="button">NEXT<i class="fas fa-chevron-right"></i></a></div>
-      </nav>
-    </div>
-  </main>
-  <footer>
-    <div class="innerwidth">
-      <div class="toTop">
-        <a href="#"></a>
-        <i class="fas fa-chevron-up"></i>
-        <p>TOP</p>
-      </div>
-      <small>Copyright &copy; 20xx YOUR SITE NAME. Design by <a href="https://utsusemi.hiroec.com">Utsusemi</a></small>
-    </div>
-  </footer>
-  <!-- jquery -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    </main>
+    
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
   </body>
 </html>
